@@ -1,0 +1,33 @@
+[
+  {
+    "id": "ORD-1793268329692",
+    "createdAt": "2026-10-29T10:05:29.692Z",
+    "customer": {
+      "name": "John",
+      "email": "ujjwal.kumar.25cse@bmu.edu.in",
+      "phone": "9835987970",
+      "address": "Ranchi, jha",
+      "paymentMethod": "Cash on Delivery"
+    },
+    "items": [
+      {
+        "id": "products/intermediate-composite-basketball.jpg",
+        "name": "Intermediate Size Basketball",
+        "image": "products/intermediate-composite-basketball.jpg",
+        "price": 1992.97,
+        "quantity": 1
+      },
+      {
+        "id": "products/women-knit-ballet-flat-black.jpg",
+        "name": "Women's Knit Ballet Flat",
+        "image": "products/women-knit-ballet-flat-black.jpg",
+        "price": 1806.52,
+        "quantity": 1
+      }
+    ],
+    "subtotal": 3799.49,
+    "tax": 379.95,
+    "total": 4179.44,
+    "note": "Academic demo only; no real payment processed."
+  }
+]
