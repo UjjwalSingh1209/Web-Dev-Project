@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Store - Checkout</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/checkout.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Shopping App</h1>
+        <div class="header-links">
+            <a href="index.html">Home</a>
+            <a href="orders.html">Orders</a>
+            <a href="cart.html">Cart (<span class="cart-count">0</span>)</a>
+        </div>
+    </div>
+
+    <main class="checkout-container">
+        <h2 class="page-heading">Checkout</h2>
+
+        <div class="checkout-layout">
+            <section class="checkout-panel">
+                <h3>Delivery Details</h3>
+                <p>Complete this form to submit your order.</p>
+
+                <form id="checkout-form" class="checkout-form" novalidate>
+                    <label for="customer-name">Full name</label>
+                    <input id="customer-name" name="name" type="text"
+                           required minlength="2" autocomplete="name"
+                           placeholder="Your full name">
+
+                    <label for="customer-email">Email address</label>
+                    <input id="customer-email" name="email" type="email"
+                           required autocomplete="email"
+                           placeholder="you@example.com">
+
+                    <label for="customer-phone">Phone number</label>
+                    <input id="customer-phone" name="phone" type="tel"
+                           required pattern="[0-9+\-\s()]{10,15}"
+                           autocomplete="tel" placeholder="10-digit phone number">
+
+                    <label for="customer-address">Delivery address</label>
+                    <textarea id="customer-address" name="address" rows="4"
+                              required minlength="10" autocomplete="street-address"
+                              placeholder="House number, street, city, state, PIN code"></textarea>
+
+                    <label for="payment-method">Payment method</label>
+                    <select id="payment-method" name="paymentMethod" required>
+                        <option value="">Choose a option</option>
+                        <option value="Cash on Delivery">Cash on Delivery</option>
+                        <option value="UPI">UPI</option>
+                    </select>
+
+                    <button class="checkout-button" type="submit">
+                        Place Order
+                    </button>
+
+                    <p id="checkout-status" class="form-status"
+                       role="status" aria-live="polite"></p>
+                </form>
+            </section>
+
+            <aside class="checkout-panel">
+                <h3>Order Summary</h3>
+                <div id="checkout-summary"></div>
+
+            </aside>
+        </div>
+    </main>
+
+    <div class="footer">
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <p style="margin: 10px 0 0 0; font-size: 14px;">
+            &copy; 2026 My Store. All rights reserved.
+        </p>
+    </div>
+
+    <script src="js/app.js" defer></script>
+</body>
+</html>

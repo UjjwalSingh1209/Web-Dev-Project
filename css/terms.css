@@ -1,0 +1,39 @@
+
+.terms-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.terms-content {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 30px;
+    line-height: 1.6;
+}
+
+.terms-content h3 {
+    font-size: 20px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.terms-content h3:first-child {
+    margin-top: 0;
+}
+
+.terms-content p {
+    color: #444;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.terms-content a {
+    color: #0F766E;
+    text-decoration: none;
+}
+
+.terms-content a:hover {
+    text-decoration: underline;
+}
