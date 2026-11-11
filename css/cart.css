@@ -1,102 +1,89 @@
-.cart-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 30px 20px 50px 20px;
-}
 
-.cart-title {
-    font-size: 28px;
-    margin: 0 0 25px 0;
+.cart-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .cart-layout {
     display: grid;
-    grid-template-columns: 1fr 320px;
+    grid-template-columns: minmax(0, 1fr) 320px;
     gap: 25px;
     align-items: start;
 }
 
 .cart-items {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .cart-item {
-    display: flex;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 180px minmax(0, 1fr);
     gap: 25px;
-    padding: 25px;
-    border-bottom: 1px solid #ddd;
-}
-
-.cart-item:last-child {
-    border-bottom: none;
 }
 
 .cart-image {
-    width: 180px;
-    height: 160px;
+    height: 170px;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-shrink: 0;
 }
 
 .cart-image img {
     max-width: 100%;
-    max-height: 100%;
+    max-height: 170px;
     object-fit: contain;
 }
 
-.cart-info {
-    flex: 1;
-}
-
-.cart-info h3 {
-    margin: 0 0 12px 0;
-    font-size: 18px;
-    color: #222;
+.cart-details h3 {
+    margin: 0 0 10px;
+    font-size: 17px;
+    font-weight: normal;
 }
 
 .cart-price {
-    color: #B12704;
+    color: #123C3A;
     font-size: 20px;
     font-weight: bold;
     margin: 8px 0;
 }
 
 .stock {
-    color: #067d62;
+    color: #0F766E;
     font-size: 14px;
-    font-weight: bold;
+    margin: 8px 0;
 }
 
-.cart-actions {
-    margin-top: 18px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.cart-actions label {
+.cart-quantity {
+    margin-top: 15px;
     font-size: 14px;
 }
 
-.cart-actions select {
-    padding: 6px 10px;
+.cart-quantity select {
+    padding: 5px 8px;
+    margin-left: 5px;
     border: 1px solid #aaa;
     border-radius: 4px;
 }
 
-.cart-actions button {
-    background-color: white;
+.remove-button {
+    background: none;
     border: none;
-    color: #0066c0;
+    color: #0F766E;
     cursor: pointer;
+    padding: 0;
+    margin-top: 12px;
     font-size: 14px;
 }
 
-.cart-actions button:hover {
+.remove-button:hover {
+    color: #c45500;
     text-decoration: underline;
 }
 
@@ -104,17 +91,18 @@
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 6px;
-    padding: 25px;
+    padding: 20px;
 }
 
-.cart-summary h2 {
+.cart-summary h3 {
     margin-top: 0;
-    font-size: 22px;
+    font-size: 20px;
 }
 
 .summary-row {
     display: flex;
     justify-content: space-between;
+    gap: 10px;
     margin: 15px 0;
     font-size: 15px;
 }
@@ -122,70 +110,56 @@
 .summary-total {
     display: flex;
     justify-content: space-between;
-    font-size: 22px;
+    gap: 10px;
+    color: #123C3A;
+    font-size: 20px;
     font-weight: bold;
-    color: #B12704;
     margin: 20px 0;
 }
 
 .checkout-button {
+    display: block;
+    box-sizing: border-box;
     width: 100%;
-    padding: 12px;
-    background-color: #f0c14b;
-    border: 1px solid #a88734;
-    border-radius: 5px;
+    padding: 11px;
+    background-color: #0F766E;
+    border: 1px solid #0F766E;
+    border-radius: 20px;
     cursor: pointer;
     font-size: 15px;
+    text-align: center;
 }
 
 .checkout-button:hover {
-    background-color: #e2b13c;
+    background-color: #0D665F;
 }
 
-.continue-shopping {
-    display: block;
-    text-align: center;
-    margin-top: 15px;
-    color: #0066c0;
+.checkout-link {
     text-decoration: none;
-    font-size: 14px;
+    color: white;
 }
-
-.continue-shopping:hover {
-    text-decoration: underline;
-}
-
-
-/* Responsive Design */
 
 @media (max-width: 800px) {
-
     .cart-layout {
         grid-template-columns: 1fr;
     }
 
     .cart-summary {
-        width: auto;
+        order: -1;
     }
 }
 
-
 @media (max-width: 550px) {
-
     .cart-item {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+        grid-template-columns: 1fr;
+        gap: 10px;
     }
 
     .cart-image {
-        width: 200px;
         height: 180px;
     }
 
-    .cart-actions {
-        justify-content: center;
-        flex-wrap: wrap;
+    .cart-image img {
+        max-height: 180px;
     }
-
 }
