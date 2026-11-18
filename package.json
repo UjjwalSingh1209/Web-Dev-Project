@@ -1,10 +1,7 @@
-
 {
-  "name": "e-commerce-platform-clone",
-  "version": "2.0.0",
-  "private": true,
-  "description": "Academic e-commerce frontend with JavaScript interactions and local JSON form storage",
-  "scripts": {
-    "start": "node server.js"
+  "dependencies": {
+    "dotenv": "^18.0.10",
+    "express": "^5.3.0",
+    "mongoose": "^9.12.2"
   }
 }
